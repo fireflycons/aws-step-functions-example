@@ -121,7 +121,7 @@ Resources:
           };
       Handler: 'index.handler'
       Role: !GetAtt 'RoleSendMessage.Arn'
-      Runtime: 'nodejs6.10'
+      Runtime: 'nodejs10.x'
   FunctionFetchActivityCount: # no monitoring needed because function is invoked by StepFunctions
     Type: 'AWS::Lambda::Function'
     Properties:
@@ -138,7 +138,7 @@ Resources:
           };
       Handler: 'index.handler'
       Role: !GetAtt 'RoleFetchActivityCount.Arn'
-      Runtime: 'nodejs6.10'
+      Runtime: 'nodejs10.x'
 
 
 
